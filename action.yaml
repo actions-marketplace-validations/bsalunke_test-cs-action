@@ -20,3 +20,6 @@ runs:
       shell: bash        
     - run: docker run --rm -v /var/run:/var/run -v /usr/local/qualys/sensor/data:/usr/local/qualys/qpa/data -e ACTIVATIONID=${{ inputs.ai }} -e CUSTOMERID=${{ inputs.ci }} -e POD_URL=${{ inputs.purl }} --net=host --name qualys-container-sensor bsalunke/mysen:0.19 --enable-console-logs --cli-mode --serverless-fargate --log-level 5 --images ${{ inputs.image }}
       shell: bash
+branding:
+  icon: 'award'  
+  color: 'green'      
